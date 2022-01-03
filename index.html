@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>Expense Tracker</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <meta name="theme-color" content="#fafafa" />
+    <script src="js/vendor/modernizr-3.11.2.min.js" defer></script>
+    <script src="js/plugins.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Expense Tracker</h1>
+      <div class="input-container">
+        <label for="date">Date</label>
+        <input type="date" name="date" class="date-input" />
+        <label for="description">Description</label>
+        <input
+          type="description"
+          name="description"
+          class="description-input"
+        />
+        <label for="amount">Amount</label>
+        <input
+          type="number"
+          min="0.00"
+          max="10000.00"
+          step="0.01"
+          name="amount"
+          class="amount-input"
+          placeholder="0.00"
+        />
+      </div>
+      <button>Create item</button>
+    </header>
+    <section class="table-container">
+      <table>
+        <tr>
+          <th class="date-style">Date</th>
+          <th class="description-style">Description</th>
+          <th class="amount-style">Amount</th>
+        </tr>
+      </table>
+      <div class="total-div">Total = <span class="total"></span></div>
+    </section>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+      window.ga = function () {
+        ga.q.push(arguments);
+      };
+      ga.q = [];
+      ga.l = +new Date();
+      ga("create", "UA-XXXXX-Y", "auto");
+      ga("set", "anonymizeIp", true);
+      ga("set", "transport", "beacon");
+      ga("send", "pageview");
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+  </body>
+</html>
